@@ -3,10 +3,12 @@
 <head> 
   <meta charset="UTF-8"> 
   <title>Ajouter une question</title> 
+  <link rel="stylesheet" href="styles.css">
 </head> 
 <body> 
+ <div class="container">
+  <a href="examens.html">View Your Exam</a>
   <h1>Ajouter une question à un examen</h1> 
- 
   <form id="form-question"> 
     <input type="text" id="proprietaire" placeholder="Nom du propriétaire" 
 required><br> 
@@ -20,11 +22,12 @@ required><br>
     <input type="text" id="cni" placeholder="CNI" required><br>
  
     <div id="propositions"></div> 
-    <button type="button" id="add-proposition">Ajouter une 
+    <button type="button" id="add-proposition" class="ajout-prop">Ajouter une 
 proposition</button><br><br> 
  
     <button type="submit">Ajouter la question</button> 
-  </form> 
+  </form>
+</div>
  
   <script src="ajouter-question.js"></script> 
 </body> 

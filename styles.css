@@ -1,0 +1,133 @@
+.container{
+    width: 100;
+    background: rgb(91, 91, 221);
+    color: #fff;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container h1{
+    text-align: center;
+    border-bottom: 1px solid rgb(179, 179, 208);
+}
+
+.container form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea{
+    border-radius: 13px;
+    padding: 10px;
+    border: none;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    font-size: 17px;
+    outline: none;
+}
+
+.container form button{
+    padding: 12px;
+    background: #63b2dd;
+    border-radius: 20px;
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.container form button.ajout-prop{
+    width: fit-content;
+    margin: 10px auto;
+    background: rgb(59, 176, 137);
+}
+
+#propositions input{
+    margin-bottom: 10px;
+}
+
+.prop-form{
+    display: flex;
+    width: 500px;
+    background: #63b2dd;
+    padding: 20px;
+    margin: 10px auto;
+    border-radius: 15px;
+    flex-direction: column;
+    gap: 10px;
+}
+.prop-form button{
+    padding: 10px;
+    width: 200px;
+    margin: 10px auto;
+    border-radius: 10px;
+    border: none;
+    color: #63b2dd;
+    font-size: 21px;
+    font-weight: 500;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.prop-form button:hover{
+    transform: scale(1.05);
+}
+
+#resultat{
+    min-height: 500px;
+    max-width: 800px;
+    padding: 20px;
+    margin: 10px auto;
+    border-radius: 20px;
+}
+#resultat .exam{
+    background: #f4ededa2;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#resultat .exam h1{
+    margin: 20px auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 34px;
+    border: none;
+    width: 300px;
+    background: #63b2dd;
+    color: #fff;
+    border-radius: 10px;
+}
+
+#resultat .exam .questions{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#resultat .exam .questions .question{
+    background: #fff;
+    width: fit-content;
+    padding: 5px 23px;
+    min-width: 500px;
+    border-radius: 10px;
+}
+
+#resultat .exam .questions .question h2{
+    text-align: center;
+}
+.options{
+    background: #edeaead8;
+    padding: 20px;
+    border-radius: 10px;
+}
+.options div{
+    display: flex;
+    background: none;
+}
+

@@ -1,25 +1,21 @@
-// TODO : Ajouter un écouteur d'événement sur le formulaire 
-document.getElementById('form-examen').addEventListener('submit', function(e) 
-{ 
-    e.preventDefault(); 
+document.getElementById('form-examen').addEventListener('submit', (event)=>{
+    event.preventDefault();
+    getExamData();
+})
 
-    // TODO : Récupérer les valeurs du formulaire 
+function getExamData(){
+    const cni = document.getElementById('cni').value;
     const examen = {
-        id: document.getElementById('cni').value,
-        nom: document.getElementById('nom').value, 
-        duree: parseInt(document.getElementById('duree').value), 
-        description: document.getElementById('description').value, 
+        nom: document.getElementById('nom').value,
+        dure: document.getElementById('duree').value,
+        description: document.getElementById('description').value,
         proprietaire: document.getElementById('proprietaire').value,
-        questions: [] 
-    }; 
-    console.log(examen);
+        questions:[]
+    }
 
-// TODO : Sauvegarder l'examen dans le localStorage sous une clé basée sur  le nom du propriétaire 
-const examsKey = 'examens_' + examen.proprietaire; 
-const exams = JSON.parse(localStorage.getItem(examsKey)) || []; 
-exams.push(examen); 
-localStorage.setItem(examsKey, JSON.stringify(exams)); 
-
-alert('Examen ajouté avec succès !'); 
-this.reset(); 
-}); 
+    const examsKey = 'exams_' + cni;
+    const exams = JSON.parse(localStorage.getItem(examsKey)) || [];
+    exams.push(examen);
+    localStorage.setItem(examsKey,JSON.stringify(exams));
+    location.href = 'ajoute-question.html';
+}
